@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="灘JVC｜灘ジュニアバレーボールクラブ公式サイト。小学生女子を対象にしたバレーボールクラブの情報や見学体験のお知らせです。" />
+    <title>灘JVC | 灘ジュニアバレーボールクラブ公式サイト</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --bg: #f8fafc;
+        --panel: rgba(255, 255, 255, 0.92);
+        --ink: #0f172a;
+        --muted: #475569;
+        --brand: #2563eb;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Zen Maru Gothic', sans-serif;
+        background: linear-gradient(180deg, #f8fbff 0%, #f8fafc 100%);
+        color: var(--ink);
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        touch-action: manipulation;
+      }
+
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+      }
+
+      .glass-panel-blue {
+        background: linear-gradient(135deg, rgba(0, 82, 204, 0.96), rgba(37, 99, 235, 0.92));
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .blob-bg {
+        position: absolute;
+        filter: blur(50px);
+        opacity: 0.6;
+        pointer-events: none;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+
+      .animate-float {
+        animation: float 3.5s ease-in-out infinite;
+      }
+
+      .faq-content {
+        transition: max-height 0.35s ease, opacity 0.25s ease;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+      }
+
+      .faq-content.open {
+        max-height: 400px;
+        opacity: 1;
+      }
+
+      .touch-card {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+  </head>
+
+  <body class="text-slate-800 antialiased min-h-screen flex flex-col pb-24 md:pb-0">
+    <header class="sticky top-0 z-50 px-4 py-3">
+      <div class="max-w-md mx-auto glass-panel rounded-2xl px-4 py-2.5 flex items-center justify-between shadow-md">
+        <a href="#top" class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-700 to-blue-500 text-white font-black flex items-center justify-center text-lg shadow-md">灘</div>
+          <div>
+            <span class="font-black text-slate-900 text-lg">灘JVC</span>
+            <p class="text-[10px] text-slate-400 font-bold">灘ジュニアバレーボールクラブ</p>
+          </div>
+        </a>
+        <a href="#contact" class="bg-yellow-400 text-slate-900 font-extrabold text-xs px-3.5 py-2 rounded-xl shadow transition-all active:scale-95 flex items-center gap-1">
+          <span>見学体験</span>
+          <i class="fa-solid fa-chevron-right text-[10px]"></i>
+        </a>
+      </div>
+    </header>
+
+    <main id="top" class="relative z-10 flex-grow px-4 max-w-md mx-auto w-full space-y-6 pt-2">
+      <section class="relative">
+        <div class="absolute -left-6 top-8 w-20 h-20 rounded-full bg-pink-200 opacity-60 blur-3xl"></div>
+        <div class="absolute -right-2 top-0 w-24 h-24 rounded-full bg-yellow-200 opacity-70 blur-3xl"></div>
+
+        <div class="glass-panel-blue relative overflow-hidden rounded-3xl p-6 text-white shadow-xl">
+          <div class="blob-bg w-28 h-28 rounded-full bg-yellow-300 left-2 top-2"></div>
+          <div class="blob-bg w-24 h-24 rounded-full bg-pink-400 right-4 bottom-6"></div>
+
+          <h1 class="relative text-2xl font-black leading-tight mb-3">
+            バレーボールをはじめよう！<br>
+            いっしょに<span class="text-yellow-300">笑って</span>、<br>
+            いっしょに<span class="text-pink-400">成長する</span><br>
+            仲間を募集中★
+          </h1>
+
+          <p class="relative text-xs text-blue-100 mb-5">
+            軽くて柔らかいボールから練習するので、運動が苦手な子でも大丈夫！優しいコーチとお姉さんたちが待ってるよ♪
+          </p>
+
+          <div class="relative grid grid-cols-2 gap-2.5">
+            <a href="#game-section" class="bg-pink-500 text-white font-extrabold text-xs py-3 rounded-xl text-center shadow active:scale-95 transition-transform flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-gamepad text-sm"></i>
+              <span>レシーブゲーム</span>
+            </a>
+            <a href="#trial" class="bg-yellow-400 text-slate-900 font-extrabold text-xs py-3 rounded-xl text-center shadow active:scale-95 transition-transform flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-flag"></i>
+              <span>見学・体験情報</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="game-section" class="space-y-3">
+        <div class="glass-panel rounded-3xl p-4 shadow border border-slate-100">
+          <h2 class="text-base font-black text-slate-900 mb-3">笑顔でつなげ！レシーブゲーム</h2>
+          <canvas id="gameCanvas" width="300" height="200" class="w-full rounded-xl bg-slate-900 block"></canvas>
+        </div>
+      </section>
+
+      <section id="info">
+        <div class="text-center space-y-1">
+          <h2 class="text-xl font-black text-slate-900">チーム情報</h2>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-5 shadow border border-slate-100 space-y-2">
+          <p class="text-sm font-black text-slate-800">対象学年：小学生女子（学年問わず歓迎）</p>
+          <p class="text-sm font-black text-slate-800">練習日時：月・水・金 17:00〜19:00</p>
+          <p class="text-sm font-black text-slate-800">場所：灘共用会館</p>
+          <p class="text-sm font-black text-slate-800">費用：月謝 1,500円 + ユニフォーム積立 1,500円</p>
+        </div>
+      </section>
+
+      <section id="trial">
+        <div class="text-center space-y-1">
+          <h2 class="text-xl font-black text-slate-900">見学・体験について</h2>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-5 shadow border border-slate-100 space-y-3">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center"><i class="fa-solid fa-calendar-check"></i></div>
+            <div>
+              <p class="text-xs font-black text-slate-900">見学受付</p>
+              <p class="text-xs text-slate-600">随時受付中。練習前後の短時間見学も可能です。</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <p class="text-xs font-black text-slate-900">体験会</p>
+              <p class="text-xs text-slate-600">初心者歓迎。まずは気軽に体験して、雰囲気を知ってみよう！</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="block mt-2 bg-blue-600 text-white font-extrabold text-xs py-3 rounded-2xl text-center shadow active:scale-95 transition-transform">
+            お問い合わせはこちら
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div class="text-center space-y-1">
+          <h2 class="text-xl font-black text-slate-900">Q&A</h2>
+        </div>
+
+        <div class="space-y-3">
+          <div class="glass-panel p-4 rounded-2xl border border-slate-100 shadow touch-card">
+            <button type="button" class="w-full text-left" onclick="toggleFaq(1)" aria-expanded="false" aria-controls="faqContent-1">
+              <h3 class="text-xs font-black text-slate-800">Q. 未経験でも大丈夫？</h3>
+            </button>
+            <div id="faqContent-1" class="faq-content text-xs text-slate-500 pt-2">
+              <p>もちろんです！未経験からのスタートがほとんどです。軽くて柔らかいボールで基礎から優しく指導します。</p>
+            </div>
+          </div>
+
+          <div class="glass-panel p-4 rounded-2xl border border-slate-100 shadow touch-card">
+            <button type="button" class="w-full text-left" onclick="toggleFaq(2)" aria-expanded="false" aria-controls="faqContent-2">
+              <h3 class="text-xs font-black text-slate-800">Q. 見学だけでもいい？</h3>
+            </button>
+            <div id="faqContent-2" class="faq-content text-xs text-slate-500 pt-2">
+              <p>はい、見学だけでも大丈夫です。まずは練習の雰囲気を知って、安心して始められるように案内します。</p>
+            </div>
+          </div>
+
+          <div class="glass-panel p-4 rounded-2xl border border-slate-100 shadow touch-card">
+            <button type="button" class="w-full text-left" onclick="toggleFaq(3)" aria-expanded="false" aria-controls="faqContent-3">
+              <h3 class="text-xs font-black text-slate-800">Q. 途中から参加しても大丈夫？</h3>
+            </button>
+            <div id="faqContent-3" class="faq-content text-xs text-slate-500 pt-2">
+              <p>もちろんです。学年や経験に合わせて、無理なく進められるようにサポートします。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="text-center space-y-1">
+          <h2 class="text-xl font-black text-slate-900">お問い合わせ</h2>
+        </div>
+
+        <div class="glass-panel p-5 rounded-3xl border border-slate-100 shadow space-y-4">
+          <a href="tel:090-8247-8250" class="bg-emerald-500 text-white p-3.5 rounded-2xl font-black text-xs flex items-center justify-between shadow active:scale-95 transition-transform">
+            <span>電話で問い合わせる: 090-8247-8250</span>
+            <i class="fa-solid fa-chevron-right text-[10px] opacity-70"></i>
+          </a>
+          <a href="mailto:Kursin917@gmail.com" class="bg-blue-600 text-white p-3.5 rounded-2xl font-black text-xs flex items-center justify-between shadow active:scale-95 transition-transform">
+            <span>メールで問い合わせる: Kursin917@gmail.com</span>
+            <i class="fa-solid fa-chevron-right text-[10px] opacity-70"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-12 bg-slate-900 text-slate-400 text-[11px] py-8 px-4">
+      <div class="max-w-md mx-auto text-center space-y-2">
+        <p class="font-bold text-slate-300">灘JVC</p>
+        <p>© 2025 灘ジュニアバレーボールクラブ</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleFaq(id) {
+        const target = document.getElementById(`faqContent-${id}`);
+        const button = document.querySelector(`button[aria-controls="faqContent-${id}"]`);
+
+        if (!target || !button) return;
+
+        const isOpen = target.classList.contains('open');
+        target.classList.toggle('open', !isOpen);
+        button.setAttribute('aria-expanded', String(!isOpen));
+      }
+
+      const canvas = document.getElementById('gameCanvas');
+      const ctx = canvas.getContext('2d');
+
+      const ball = {
+        x: canvas.width / 2,
+        y: 30,
+        radius: 12,
+        speedX: 1.8,
+        speedY: 2.1,
+      };
+
+      const paddle = {
+        x: canvas.width / 2 - 25,
+        y: canvas.height - 22,
+        width: 50,
+        height: 10,
+        speed: 4,
+      };
+
+      let score = 0;
+      let started = false;
+      let touchX = canvas.width / 2;
+
+      function drawRoundedRect(x, y, width, height, radius, color) {
+        ctx.beginPath();
+        ctx.moveTo(x + radius, y);
+        ctx.lineTo(x + width - radius, y);
+        ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+        ctx.lineTo(x + width, y + height - radius);
+        ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+        ctx.lineTo(x + radius, y + height);
+        ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+        ctx.lineTo(x, y + radius);
+        ctx.quadraticCurveTo(x, y, x + radius, y);
+        ctx.closePath();
+        ctx.fillStyle = color;
+        ctx.fill();
+      }
+
+      function updatePaddle() {
+        const diff = touchX - (paddle.x + paddle.width / 2);
+        if (Math.abs(diff) > 4) {
+          paddle.x += diff * 0.12;
+        }
+
+        paddle.x = Math.max(0, Math.min(canvas.width - paddle.width, paddle.x));
+      }
+
+      function drawGame() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#0f172a';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#f8fafc';
+        ctx.font = 'bold 12px sans-serif';
+        ctx.fillText(`Score: ${score}`, 10, 18);
+
+        drawRoundedRect(paddle.x, paddle.y, paddle.width, paddle.height, 5, '#fbbf24');
+
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+        ctx.fillStyle = '#f97316';
+        ctx.fill();
+
+        if (!started) {
+          ball.x = canvas.width / 2;
+          ball.y = 30;
+          ctx.fillStyle = '#e2e8f0';
+          ctx.font = 'bold 12px sans-serif';
+          ctx.fillText('タップしてスタート', 80, 110);
+        } else {
+          ball.x += ball.speedX;
+          ball.y += ball.speedY;
+        }
+
+        if (ball.x <= ball.radius || ball.x >= canvas.width - ball.radius) {
+          ball.speedX *= -1;
+        }
+
+        if (ball.y <= ball.radius) {
+          ball.speedY *= -1;
+        }
+
+        if (
+          ball.y + ball.radius >= paddle.y &&
+          ball.y - ball.radius <= paddle.y + paddle.height &&
+          ball.x >= paddle.x &&
+          ball.x <= paddle.x + paddle.width &&
+          ball.speedY > 0
+        ) {
+          ball.speedY = -Math.abs(ball.speedY) - 0.15;
+          ball.speedX += (ball.x - (paddle.x + paddle.width / 2)) * 0.02;
+          score += 1;
+        }
+
+        if (ball.y > canvas.height + 20) {
+          started = false;
+          score = 0;
+          ball.x = canvas.width / 2;
+          ball.y = 30;
+          ball.speedX = 1.8;
+          ball.speedY = 2.1;
+        }
+
+        updatePaddle();
+        requestAnimationFrame(drawGame);
+      }
+
+      canvas.addEventListener('pointerdown', (event) => {
+        const rect = canvas.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * canvas.width;
+        touchX = x;
+        started = true;
+      });
+
+      canvas.addEventListener('pointermove', (event) => {
+        const rect = canvas.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * canvas.width;
+        touchX = x;
+      });
+
+      drawGame();
+    </script>
+  </body>
+</html>
