@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="description" content="灘JVC｜灘ジュニアバレーボールクラブ公式サイト。小学生女子を対象にしたバレーボールクラブの情報や見学体験のお知らせです。" />
+    <meta name="description" content="灘JVC｜灘ジュニアバレーボールクラブ公式サイト。小学生女子を対象にしたバレーボールクラブの見学・体験情報や練習のご案内です。" />
+    <meta property="og:title" content="灘JVC | 灘ジュニアバレーボールクラブ" />
+    <meta property="og:description" content="笑って成長する仲間を募集中。見学・体験も随時受付中です。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80" />
     <title>灘JVC | 灘ジュニアバレーボールクラブ公式サイト</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,7 +40,7 @@
         background: rgba(255, 255, 255, 0.92);
         backdrop-filter: blur(14px);
         -webkit-backdrop-filter: blur(14px);
-        border: 1px solid rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.7);
       }
 
       .glass-panel-blue {
@@ -70,12 +74,31 @@
       }
 
       .faq-content.open {
-        max-height: 400px;
+        max-height: 500px;
         opacity: 1;
       }
 
       .touch-card {
         -webkit-tap-highlight-color: transparent;
+      }
+
+      .practice-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .practice-card::after {
+        content: "";
+        position: absolute;
+        inset: auto -20% -20% auto;
+        width: 120px;
+        height: 120px;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 9999px;
+      }
+
+      .hero-badge {
+        box-shadow: 0 10px 30px rgba(14, 116, 144, 0.25);
       }
     </style>
   </head>
@@ -106,6 +129,11 @@
           <div class="blob-bg w-28 h-28 rounded-full bg-yellow-300 left-2 top-2"></div>
           <div class="blob-bg w-24 h-24 rounded-full bg-pink-400 right-4 bottom-6"></div>
 
+          <div class="relative hero-badge inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full text-[10px] font-bold tracking-wide text-blue-100 mb-4">
+            <i class="fa-solid fa-volleyball text-yellow-300"></i>
+            2025年度 新入部員募集中
+          </div>
+
           <h1 class="relative text-2xl font-black leading-tight mb-3">
             バレーボールをはじめよう！<br>
             いっしょに<span class="text-yellow-300">笑って</span>、<br>
@@ -130,6 +158,24 @@
         </div>
       </section>
 
+      <section id="about" class="space-y-3">
+        <div class="text-center space-y-1">
+          <h2 class="text-xl font-black text-slate-900">クラブ紹介</h2>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-4 shadow border border-slate-100 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80"
+            alt="バレーボール練習の様子"
+            class="w-full h-40 object-cover rounded-2xl mb-4"
+          />
+          <p class="text-sm text-slate-600 leading-6">
+            灘JVCでは、<span class="font-black text-slate-800">「笑顔で楽しく」「基礎から丁寧に」</span>を大切にしています。
+            初心者の子も、少しずつ自信を育てながら、仲間と一緒に成長していける環境を目指しています。
+          </p>
+        </div>
+      </section>
+
       <section id="game-section" class="space-y-3">
         <div class="glass-panel rounded-3xl p-4 shadow border border-slate-100">
           <h2 class="text-base font-black text-slate-900 mb-3">笑顔でつなげ！レシーブゲーム</h2>
@@ -147,6 +193,86 @@
           <p class="text-sm font-black text-slate-800">練習日時：月・水・金 17:00〜19:00</p>
           <p class="text-sm font-black text-slate-800">場所：灘共用会館</p>
           <p class="text-sm font-black text-slate-800">費用：月謝 1,500円 + ユニフォーム積立 1,500円</p>
+        </div>
+      </section>
+
+      <section id="practice-flow">
+        <div class="text-center space-y-1">
+          <h2 class="text-xl font-black text-slate-900">入部までの流れ</h2>
+        </div>
+
+        <div class="space-y-3">
+          <div class="practice-card glass-panel rounded-3xl p-4 shadow border border-slate-100 bg-gradient-to-br from-blue-50 to-white">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-xs">1</div>
+              <p class="font-black text-slate-800">まずはお気軽に見学</p>
+            </div>
+            <p class="text-xs text-slate-600">練習の雰囲気やスタッフの対応を見て、自分に合うかを確認できます。</p>
+          </div>
+
+          <div class="practice-card glass-panel rounded-3xl p-4 shadow border border-slate-100 bg-gradient-to-br from-yellow-50 to-white">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 rounded-full bg-yellow-400 text-slate-900 flex items-center justify-center font-black text-xs">2</div>
+              <p class="font-black text-slate-800">体験練習</p>
+            </div>
+            <p class="text-xs text-slate-600">簡単な基礎練習を体験して、ボールに触れる感覚を楽しめます。</p>
+          </div>
+
+          <div class="practice-card glass-panel rounded-3xl p-4 shadow border border-slate-100 bg-gradient-to-br from-pink-50 to-white">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 rounded-full bg-pink-500 text-white flex items-center justify-center font-black text-xs">3</div>
+              <p class="font-black text-slate-800">入部決定</p>
+            </div>
+            <p class="text-xs text-slate-600">不安や質問もその場で解消しながら、安心してスタートできます。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <div class="text-center space-y-1">
+          <h2 class="text-xl font-black text-slate-900">練習の様子</h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=800&q=80" alt="バレーの練習風景" class="h-36 w-full object-cover rounded-2xl shadow" />
+          <img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=800&q=80" alt="ボールを持つ子ども" class="h-36 w-full object-cover rounded-2xl shadow" />
+          <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=800&q=80" alt="笑顔の選手" class="h-36 w-full object-cover rounded-2xl shadow" />
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80" alt="チームで練習する様子" class="h-36 w-full object-cover rounded-2xl shadow" />
+        </div>
+      </section>
+
+      <section id="location">
+        <div class="text-center space-y-1">
+          <h2 class="text-xl font-black text-slate-900">アクセス</h2>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-4 shadow border border-slate-100 space-y-3">
+          <div class="rounded-2xl overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps?q=%E7%81%BD%E5%85%B1%E7%94%A8%E4%BC%9A%E9%A4%A8&output=embed"
+              width="100%"
+              height="180"
+              style="border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              title="灘共用会館地図"
+            ></iframe>
+          </div>
+
+          <div class="space-y-1 text-xs text-slate-600">
+            <p><span class="font-black text-slate-800">場所：</span>灘共用会館</p>
+            <p><span class="font-black text-slate-800">最寄り駅：</span>最寄りの交通手段に合わせてご相談ください</p>
+          </div>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=%E7%81%BD%E5%85%B1%E7%94%A8%E4%BC%9A%E9%A4%A8"
+            target="_blank"
+            rel="noreferrer"
+            class="block bg-slate-800 text-white font-extrabold text-xs py-3 rounded-2xl text-center shadow active:scale-95 transition-transform"
+          >
+            地図を開く
+          </a>
         </div>
       </section>
 
@@ -210,6 +336,15 @@
               <p>もちろんです。学年や経験に合わせて、無理なく進められるようにサポートします。</p>
             </div>
           </div>
+
+          <div class="glass-panel p-4 rounded-2xl border border-slate-100 shadow touch-card">
+            <button type="button" class="w-full text-left" onclick="toggleFaq(4)" aria-expanded="false" aria-controls="faqContent-4">
+              <h3 class="text-xs font-black text-slate-800">Q. 体験時に持ち物は必要？</h3>
+            </button>
+            <div id="faqContent-4" class="faq-content text-xs text-slate-500 pt-2">
+              <p>動きやすい服装と水分補給のための水筒があれば十分です。必要に応じて、スタッフが案内します。</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -227,6 +362,14 @@
             <span>メールで問い合わせる: Kursin917@gmail.com</span>
             <i class="fa-solid fa-chevron-right text-[10px] opacity-70"></i>
           </a>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-3 text-xs text-slate-600 leading-6">
+            <p class="font-black text-slate-800 mb-1">お問い合わせの際は、以下をご用意ください</p>
+            <p>・お子さまの名前</p>
+            <p>・学年</p>
+            <p>・見学・体験の希望日</p>
+            <p>・連絡先</p>
+          </div>
         </div>
       </section>
     </main>
@@ -266,7 +409,6 @@
         y: canvas.height - 22,
         width: 50,
         height: 10,
-        speed: 4,
       };
 
       let score = 0;
@@ -300,7 +442,6 @@
 
       function drawGame() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
         ctx.fillStyle = '#0f172a';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
